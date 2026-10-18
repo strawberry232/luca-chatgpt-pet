@@ -44,6 +44,14 @@ python scripts/verify.py
 
 The build writes `build/luca-v2.png`, two eight-frame cycles, reusable layer PNGs and motion parameters. It uses the two already calibrated side-view anchors, rotates hierarchical joints and replaces only the running rows in the baseline atlas. Verification compares the rebuilt image against the shipped image pixel for pixel, checks transparency, occupied cells and asset hashes. It requires no API key or image generation service.
 
+## Reusable skill
+
+The project includes [pet-animation-workflow](.agents/skills/pet-animation-workflow/SKILL.md) in `.agents/skills/`. It captures character consistency, profile artwork, layered animation, preservation of unrelated states, atlas checks and Petdex packaging. Its references separate general guidance from the Luca-specific rig. It complements the Pets plugin; it does not provide upload tools or keyword triggers by itself.
+
+Invoke `$pet-animation-workflow` while working in this repository. A project skill travels with the repository; install the same folder in your Codex user skill directory to use it across projects. If it does not appear in the skill selector, reopen or restart Codex. [Official skill discovery guidance](https://learn.chatgpt.com/docs/build-skills).
+
+The standalone helper requires Pillow. Run `python scripts/test_pet_skill.py` to check v1/v2 detection, the v2 manifest regression, preserved rows and ZIP integrity.
+
 ## Production notes
 
 The torso, head, arms, shorts, wraps and boots all face sideways. Arm bandage placement follows anatomical sides. Each run cycle reuses fixed source textures; limb depth uses occlusion instead of alternating dark tints. Edges still change through interpolation. Existing non-running animation rows are preserved exactly.

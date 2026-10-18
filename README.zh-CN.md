@@ -44,6 +44,14 @@ python scripts/verify.py
 
 结果输出到 `build/luca-v2.png`，同时生成左右各八帧跑步、可复用图层 PNG 和动作参数。程序使用已经配色校准的两张侧身原画，按关节层级旋转，只替换基准图集中的左右跑步两行。验证会逐像素比较重建结果与最终图集，并检查透明背景、有效格数和素材哈希。重建无需 API 密钥或图像生成服务。
 
+## 可复用技能
+
+项目包含 [pet-animation-workflow](.agents/skills/pet-animation-workflow/SKILL.md)，放在 `.agents/skills/`。它固定造型一致性、侧身原画、分层动作、保留其他状态、图集检查及 Petdex 打包流程；参考资料分开记录通用方法和卢卡实例。它配合 Pets 插件使用，本身不提供上传工具或关键词触发接口。
+
+在本仓库中可用 `$pet-animation-workflow` 调用。项目级技能随仓库保存；将同一技能文件夹安装到 Codex 个人技能目录则可跨项目使用。若技能列表未显示，可重新打开或重启 Codex。[官方技能发现说明](https://learn.chatgpt.com/docs/build-skills)。
+
+通用检查工具只需 Pillow。运行 `python scripts/test_pet_skill.py` 可检查 v1/v2 识别、版本冲突回归、保留行及 ZIP 完整性。
+
 ## 制作要点
 
 头、身体、手臂、短裤、绑腿和鞋都采用完整侧面。手臂绷带按角色真实左右侧处理。每帧复用固定原画纹理，通过遮挡表现远近，不交替给腿染暗；旋转插值仍会影响边缘像素。其他九行原有动画与注视姿态逐像素保留。

@@ -1,0 +1,4 @@
+interface:
+  display_name: "宠物动画制作与修复"
+  short_description: "固定角色造型、修复分层动画、验收图集并打包兼容 v2 的投稿文件"
+  default_prompt: "使用 $pet-animation-workflow，在保留角色造型和已有动作的前提下制作或修复宠物动画，并输出预览与投稿包。"
