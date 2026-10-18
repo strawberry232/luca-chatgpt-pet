@@ -118,6 +118,11 @@
       "sha256": "6ac82cf54d53f9639133270ffe043cab650995ff41d8be8f4de73471ceb2526e"
     },
     {
+      "path": "assets/previews/turning-comparison.gif",
+      "bytes": 2810190,
+      "sha256": "1bd6821bda87548027697f18ad655e80c2d44bedb9dda09d694178387e040eff"
+    },
+    {
       "path": "assets/previews/waiting.gif",
       "bytes": 238738,
       "sha256": "a7e6852059978fae676b838a8cd1a1745282b765c1c15bfc672569f32f7c89e7"
@@ -172,5 +177,6 @@
       "bytes": 29903,
       "sha256": "b4d0978129d2f344ea855c38624db4b780ebe27bd5473ddf7bad71d65463f28f"
     }
-  ]
+  ],
+  "viewer_revision": "eased-gaze-v1"
 }

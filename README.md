@@ -24,7 +24,9 @@ The client chooses animations from work activity. **Nine included states do not 
 
 ## Mouse tracking and blink preview
 
-Open [the interactive viewer](viewer/index.html) locally, or run `python scripts/build_interactive_preview.py` to make `build/luca-preview.html`, a standalone file with the atlas embedded. Pointer tracking inside this page is implemented and tested in all sixteen directions.
+Open [the interactive viewer](viewer/index.html) locally, or run `python scripts/build_interactive_preview.py` to make `build/luca-preview.html`, a standalone file with the atlas embedded. Pointer tracking inside this page is implemented and tested in all sixteen directions. Choose “Show turning demo” for automatic direction changes.
+
+Direction changes follow the shortest arc through neighboring poses, with acceleration, braking and boundary hysteresis. All sixteen drawings retain their original pixels, colors and costume. These are sprite transitions; first target acquisition, returning to idle and action-mode changes still select a frame directly. See the [turning comparison](assets/previews/turning-comparison.gif): instant switching on the left, gradual turns on the right.
 
 The native ChatGPT client controls its own tracking targets and idle timing. This project cannot enable global mouse tracking or change native frame timing by uploading an atlas. The repaired idle uses one closed frame instead of two half/closed frames; the current client still holds that frame for about 660 ms. The viewer also offers a natural 75 ms blink mode, explicitly separate from native behavior. See [support and limits](docs/MOUSE_TRACKING.md).
 

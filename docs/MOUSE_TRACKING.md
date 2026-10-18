@@ -10,6 +10,22 @@ Four cardinal drawings give basic tracking, eight add diagonals, and sixteen pro
 
 These are real interactions in the standalone viewer. They are not injected into ChatGPT. There is no new global desktop mouse listener in this project.
 
+## Turning transitions
+
+The viewer now uses a velocity-based direction controller. The target may change instantly, while the displayed heading follows the shortest arc with a 540°/s speed limit, 3200°/s² acceleration and braking near the target. Each display callback advances by at most one neighboring pose, including the 337.5°/0° boundary. A 3° hysteresis margin beyond sector boundaries prevents chatter. Elapsed time is capped at 50 ms after a background pause to avoid skipping poses.
+
+The transition reuses the sixteen original drawings without new art, face crossfades or whole-sprite rotation. It remains a sprite sequence in 22.5° steps, rather than continuous Live2D deformation. First target acquisition, returning to idle and action-mode changes still select a frame directly; no linking artwork was added for those changes. These parameters affect the viewer only, not the native ChatGPT overlay.
+
+Choose “Show turning demo” for automatic playback. In the [comparison GIF](../assets/previews/turning-comparison.gif), the left switches instantly and the right uses this same controller. Reproduce it with:
+
+```sh
+node scripts/test_gaze.cjs
+node scripts/export_turn_trace.cjs build/turn-trace.json
+python scripts/render_turn_preview.py build/turn-trace.json
+```
+
+The browser check runs with `node scripts/test_turn_viewer.cjs`, after building the standalone HTML. It requires Playwright and Chromium; `PLAYWRIGHT_MODULE` and `PLAYWRIGHT_EXECUTABLE` can point to existing installations. Results are written to `qa/turn-transition-browser-check.json`.
+
 ## Observed native behavior
 
 Read-only inspection of the installed Windows client 26.1013.4894.0 found an existing sixteen-direction selector for v2 assets. The inspected overlay passes typing-caret targets and a computer-use cursor target to it; this does not establish general tracking of every ordinary OS mouse move. No supported switch for that behavior was identified. The app binary and its settings were not patched.

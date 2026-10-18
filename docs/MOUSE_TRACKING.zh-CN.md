@@ -10,6 +10,22 @@
 
 这是真实运行在独立预览中的交互，不是注入 ChatGPT 的功能。本项目没有新增系统全局鼠标监听器。
 
+## 转向过渡
+
+已在预览中加入带速度的方向控制器。鼠标目标可以瞬间换方向，显示朝向会沿最短圆弧逐步追上；最大速度 540°/秒，加速度 3200°/秒²，接近目标时减速。每次刷新最多前进一个相邻姿态，337.5° 与 0° 之间直接衔接。方向分界点外再留 3° 稳定区，防止轻微抖动造成来回切换。后台暂停后最多按 50 毫秒推进，避免恢复时一下跨过多个姿态。
+
+这种过渡复用十六张原图，没有生成新姿态、混合两张脸或旋转整张角色图。它仍是 22.5° 一档的序列帧，不是连续的 Live2D 骨骼变形。首次获得目标、鼠标离开后的待机和动作模式切换仍直接选帧；这次没有补画这些动作之间的衔接。上述参数只影响此预览，不会改变 ChatGPT 原生浮窗。
+
+点击“演示转向”可自动播放。[左右对比 GIF](../assets/previews/turning-comparison.gif)中，左侧直接切换，右侧使用同一个转向控制器。可复现生成：
+
+```sh
+node scripts/test_gaze.cjs
+node scripts/export_turn_trace.cjs build/turn-trace.json
+python scripts/render_turn_preview.py build/turn-trace.json
+```
+
+实际浏览器检查使用 `node scripts/test_turn_viewer.cjs`，需要 Playwright 及 Chromium，并先导出独立 HTML。可通过 `PLAYWRIGHT_MODULE` 和 `PLAYWRIGHT_EXECUTABLE` 指定现有安装；结果记录在 `qa/turn-transition-browser-check.json`。
+
 ## 当前原生客户端的情况
 
 只读检查本机 Windows 客户端 26.1013.4894.0，确认已有 v2 十六方向选择逻辑。检查到的浮窗会传入输入光标位置和 Computer Use 光标目标；这不能证明它会跟随每一次普通系统鼠标移动。未找到可用来开启该行为的受支持开关，本次没有修改客户端二进制或设置。

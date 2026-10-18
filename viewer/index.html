@@ -11,21 +11,21 @@
 </head>
 <body>
 <main>
-  <header><div><div class="eyebrow">LUCA BALSA · COMPANION</div><h1 data-i18n="title">卢卡的陪伴时刻</h1><p data-i18n="intro">移动鼠标，看看卢卡在望向哪里。</p></div><button type="button" class="language" id="language">English</button></header>
+  <header><div><div class="eyebrow">LUCA BALSA · COMPANION</div><h1 data-i18n="title">卢卡的陪伴时刻</h1><p data-i18n="intro">移动鼠标，卢卡会顺着方向慢慢转过去。</p></div><button type="button" class="language" id="language">English</button></header>
   <div class="layout">
     <section class="scene" aria-label="Pet animation preview" id="scene">
-      <div class="direction" data-i18n="directions">十六个注视方向，已有素材直接复用</div>
+      <div class="direction" data-i18n="directions">十六方向过渡 · 缓起缓停</div>
       <div class="compass" aria-hidden="true"><span class="north">↑</span><span class="east">→</span><span class="south">↓</span><span class="west">←</span></div>
       <div class="pet-wrap"><canvas id="pet" width="384" height="416" aria-label="囚徒卢卡动画预览"></canvas></div>
       <div class="status" id="status" aria-live="polite">待机</div>
       <p id="load-error">图集未能加载，请从项目文件夹打开预览，或使用完整的独立预览文件。</p>
     </section>
     <aside class="controls">
-      <section class="card"><h2 data-i18n="action">选择动作</h2><div class="modes"><button data-mode="follow" aria-pressed="true" data-i18n="follow">跟随鼠标</button><button data-mode="idle" aria-pressed="false" data-i18n="idle">待机 · 眨眼</button><button data-mode="failed" aria-pressed="false" data-i18n="failed">失落 · 轻轻垂头</button></div><p class="hint" data-i18n="leave">鼠标离开窗口后，恢复待机。</p></section>
+      <section class="card"><h2 data-i18n="action">选择动作</h2><div class="modes"><button data-mode="follow" aria-pressed="true" data-i18n="follow">跟随鼠标</button><button data-mode="demo" aria-pressed="false" data-i18n="demo">演示转向</button><button data-mode="idle" aria-pressed="false" data-i18n="idle">待机 · 眨眼</button><button data-mode="failed" aria-pressed="false" data-i18n="failed">失落 · 轻轻垂头</button></div><p class="hint" data-i18n="leave">转向会经过相邻姿态；轻微抖动时保持视线稳定。</p></section>
       <section class="card"><h2 data-i18n="timing">待机播放节奏</h2><select id="timing" aria-label="Idle playback timing"><option value="natural" data-i18n="natural">自然眨眼预览</option><option value="client" data-i18n="client">当前客户端固定节奏</option></select><p class="hint" id="timing-note"></p><span class="tag" data-i18n="sameHead">待机与失落复用同一头部原图</span></section>
     </aside>
   </div>
-  <p class="footnote" data-i18n="scope">此页面已实现窗口内鼠标跟随。ChatGPT 浮窗的全局跟随和眨眼帧率由客户端控制，上传图集不会改写客户端行为。</p>
+  <p class="footnote" data-i18n="scope">此页面已实现窗口内鼠标跟随和平缓转向。ChatGPT 浮窗的全局跟随、过渡和眨眼帧率由客户端控制，上传图集不会改写客户端行为。</p>
 </main>
 <script src="gaze.js"></script>
 <script src="player.js"></script>

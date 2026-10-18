@@ -24,7 +24,9 @@
 
 ## 鼠标视线与眨眼预览
 
-本地打开[交互预览](viewer/index.html)，或运行 `python scripts/build_interactive_preview.py` 生成内嵌图集的独立文件 `build/luca-preview.html`。此页面已实现窗口内鼠标跟随，十六方向均经浏览器验证。
+本地打开[交互预览](viewer/index.html)，或运行 `python scripts/build_interactive_preview.py` 生成内嵌图集的独立文件 `build/luca-preview.html`。此页面已实现窗口内鼠标跟随，十六方向均经浏览器验证。点击“演示转向”可自动查看左右及斜向切换。
+
+视线换方向时会沿最短路线依次播放相邻姿态，缓起缓停，并抑制方向边界附近的抖动。复用原有十六张图，不改配色、衣服和头部比例。这是序列帧过渡；首次获得鼠标目标、离开窗口恢复待机以及动作模式切换仍直接选帧。查看[转向对比动画](assets/previews/turning-comparison.gif)（左侧直接切换，右侧逐步转向）。
 
 ChatGPT 原生客户端自行决定视线目标和待机时长，上传图集无法开启全局鼠标跟随或改写客户端帧率。修订后的待机由连续两帧半闭眼/闭眼改为仅一帧闭眼；当前客户端仍会让这一帧停留约 660 毫秒。预览另提供自然节奏，闭眼约 75 毫秒，与原生客户端明确区分。详见[支持范围与限制](docs/MOUSE_TRACKING.zh-CN.md)。
 
