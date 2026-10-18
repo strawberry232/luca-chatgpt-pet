@@ -22,6 +22,16 @@ In an environment with the Pets plugin and custom pet upload support, provide `a
 
 The client chooses animations from work activity. **Nine included states do not imply nine user commands.** The exact mapping of the `review` row to the client's Ready state is unconfirmed. See [state meanings and triggers](docs/STATES.md).
 
+## Submit to Petdex
+
+Use a ZIP with an explicit v2 manifest. Petdex's bare-image uploader was observed to generate a manifest without `spriteVersionNumber`, which defaults to v1 and conflicts with this 1536 × 2288 atlas.
+
+```sh
+python scripts/package_petdex.py
+```
+
+Upload `build/luca-petdex-v2.zip` at [Petdex Submit](https://petdex.dev/submit). The ZIP contains exactly `pet.json` and `spritesheet.png` at its root; the manifest sets numeric `spriteVersionNumber: 2`. The original atlas bytes remain unchanged. Packaging does not publish anything; sign in and review the submission on Petdex yourself. Source manifest: [petdex/pet.json](petdex/pet.json).
+
 ## Rebuild
 
 Python 3.12 was used. Run from the repository root:

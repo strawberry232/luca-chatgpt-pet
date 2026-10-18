@@ -22,6 +22,16 @@
 
 动画由客户端根据工作状态选择。**有九种动画，不等于有九条手动触发指令。**`review`“检查成果”与客户端 Ready 状态的确切映射尚未确认。详见[状态含义与触发说明](docs/STATES.zh-CN.md)。
 
+## 投稿到 Petdex
+
+使用带有明确 v2 配置的 ZIP。核查时，Petdex 的单张图片上传流程会生成缺少 `spriteVersionNumber` 的配置，默认按 v1 解析，与本图集的 1536 × 2288 尺寸冲突。
+
+```sh
+python scripts/package_petdex.py
+```
+
+在 [Petdex 投稿页](https://petdex.dev/submit)上传 `build/luca-petdex-v2.zip`。压缩包根目录仅有 `pet.json` 和 `spritesheet.png`，配置中明确填写数字 `spriteVersionNumber: 2`，图集原始字节保持不变。打包不会公开发布；请自行在 Petdex 登录并确认投稿内容。配置源文件：[petdex/pet.json](petdex/pet.json)。
+
 ## 重新制作跑步图集
 
 已在 Python 3.12 环境验证。在仓库根目录运行：
