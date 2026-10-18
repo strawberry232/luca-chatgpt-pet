@@ -1,0 +1,111 @@
+{
+  "art_revision": "v5-full-profile",
+  "atlas_format": 2,
+  "files": [
+    {
+      "path": "assets/luca-v2.png",
+      "bytes": 2455360,
+      "sha256": "ef388cc49b36bb56f24e8fea7a3cf63c10175c775d29a24fba26d2d89e5548d9"
+    },
+    {
+      "path": "assets/previews/all-states.gif",
+      "bytes": 2191021,
+      "sha256": "f3736436957305d4d86db37d8163df0c1abcd18682deccb75cfe4678514ed376"
+    },
+    {
+      "path": "assets/previews/all-states.mp4",
+      "bytes": 1202041,
+      "sha256": "2ef22087949884c76af575d0bfee4eff4efd548c4e101c23eab4b507d1edf18c"
+    },
+    {
+      "path": "assets/previews/failed.gif",
+      "bytes": 74403,
+      "sha256": "cd9114a5db482f392df28e34a28d7d0899dd4ef78a2a1b510bb5f0369d20843f"
+    },
+    {
+      "path": "assets/previews/idle-running-comparison.gif",
+      "bytes": 840328,
+      "sha256": "b161a918a73d18f4638829a2f6c81efff719620c5a0547ad5a681ecba16bbba9"
+    },
+    {
+      "path": "assets/previews/idle.gif",
+      "bytes": 53603,
+      "sha256": "a557cdfa36b1f08e700e3d107f29ed3a4703c9388e205e7755c3316be7815e96"
+    },
+    {
+      "path": "assets/previews/jumping.gif",
+      "bytes": 40252,
+      "sha256": "1d45ca8a8a7e1de646cfbad5ece1f85205f1a7a9150fdb835a004bced69d2e66"
+    },
+    {
+      "path": "assets/previews/look-directions.png",
+      "bytes": 909917,
+      "sha256": "643cec8f608b2ad8bdf82f8204208914c918b29d1e8496e21fc8dd5a325d9861"
+    },
+    {
+      "path": "assets/previews/look-loop.gif",
+      "bytes": 139855,
+      "sha256": "c223e25c132198ce456d8f5311c6dfe09d37e978437963afea994061a7e507f1"
+    },
+    {
+      "path": "assets/previews/review.gif",
+      "bytes": 52551,
+      "sha256": "3f6f2b1a799b844a7dc743c97eac5ce346a331530a9768d36172f49b7c2c8e79"
+    },
+    {
+      "path": "assets/previews/running-keyframes.png",
+      "bytes": 159219,
+      "sha256": "4658ddcd25ccfbb4a8e319eebd72af668dc8e59986400467c2c859b11dae5541"
+    },
+    {
+      "path": "assets/previews/running-left.gif",
+      "bytes": 60107,
+      "sha256": "69f3266e268ee0465b91db8486f768fcd6bc1407bdd423339eb6e0ea66d8b62c"
+    },
+    {
+      "path": "assets/previews/running-right.gif",
+      "bytes": 59494,
+      "sha256": "6ca6123c6455ec3fc54948e6f4375c06d3a4879f1c771c5ea0677a03f89a874b"
+    },
+    {
+      "path": "assets/previews/running.gif",
+      "bytes": 52956,
+      "sha256": "75f1805832a180c2b4bb6788f8bdb36c61cd454389258378f14bbaca2c981710"
+    },
+    {
+      "path": "assets/previews/side-running.gif",
+      "bytes": 527027,
+      "sha256": "6ac82cf54d53f9639133270ffe043cab650995ff41d8be8f4de73471ceb2526e"
+    },
+    {
+      "path": "assets/previews/waiting.gif",
+      "bytes": 53068,
+      "sha256": "d207b598bd4976454f6436ebb531caf3b5f40432583c8383a8252dfcfab98a47"
+    },
+    {
+      "path": "assets/previews/waving.gif",
+      "bytes": 35693,
+      "sha256": "8cd17b10253638014ac73cbc0066a954530bb5f8992b49a7911710d09a731c7f"
+    },
+    {
+      "path": "assets/source/base-spritesheet.png",
+      "bytes": 2969172,
+      "sha256": "4560815f18dbbf4af091a3d31efdf425a54ca8ec9293fc725db30500500ec415"
+    },
+    {
+      "path": "assets/source/idle.png",
+      "bytes": 39921,
+      "sha256": "96beaf1a5d5a60f02eac906ee82f20f8277937dea8e68991e5a970dddbcd3b82"
+    },
+    {
+      "path": "assets/source/profile-left.png",
+      "bytes": 30187,
+      "sha256": "fca839b95a7cd0a1ff2c6bf8b4793cb996fc53f02a09c4721f062c72c250a9c2"
+    },
+    {
+      "path": "assets/source/profile-right.png",
+      "bytes": 29903,
+      "sha256": "b4d0978129d2f344ea855c38624db4b780ebe27bd5473ddf7bad71d65463f28f"
+    }
+  ]
+}
