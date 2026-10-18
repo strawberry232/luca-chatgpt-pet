@@ -12,13 +12,18 @@ These are real interactions in the standalone viewer. They are not injected into
 
 ## Turning transitions
 
-The viewer now uses a velocity-based direction controller. The target may change instantly, while the displayed heading follows the shortest arc with a 540°/s speed limit, 3200°/s² acceleration and braking near the target. Each display callback advances by at most one neighboring pose, including the 337.5°/0° boundary. A 3° hysteresis margin beyond sector boundaries prevents chatter. Elapsed time is capped at 50 ms after a background pause to avoid skipping poses.
+Direction control and visual interpolation are now separate. A damped controller follows the shortest arc with a 360°/s speed limit and 2600°/s² acceleration limit. Reversals retain momentum and brake before turning back. Elapsed time is capped at 50 ms after a background pause. The sixteen-direction status index retains a 3° hysteresis margin; rendering uses the continuous heading.
 
-The transition reuses the sixteen original drawings without new art, face crossfades or whole-sprite rotation. It remains a sprite sequence in 22.5° steps, rather than continuous Live2D deformation. First target acquisition, returning to idle and action-mode changes still select a frame directly; no linking artwork was added for those changes. These parameters affect the viewer only, not the native ChatGPT overlay.
+The sixteen approved drawings produce 128 viewer frames in `assets/viewer/look-inbetweens.png`, at 2.8125° spacing. Bidirectional optical flow, inverse warping and premultiplied RGBA blending create the inbetweens; all sixteen original endpoints remain pixel-exact. Continuous-angle blending between neighboring inbetweens also changes rendered pixels within a single original direction sector. This avoids a direct crossfade of two widely different faces or rotation of the whole sprite.
 
-Choose “Show turning demo” for automatic playback. In the [comparison GIF](../assets/previews/turning-comparison.gif), the left switches instantly and the right uses this same controller. Reproduce it with:
+This is an image-warping approximation, not complete Live2D volume, occlusion or skeletal modeling. Hair and face details can soften or deform where the source drawings differ substantially; hand-drawn inbetweens would improve those areas further. First target acquisition, returning to idle and action-mode changes still select a frame directly. The native atlas, nine states and sixteen look poses are untouched. These extra frames do not fit the fixed v2 atlas and do not change the native ChatGPT overlay.
+
+Choose “Show turning demo” for automatic playback. The [comparison GIF](../assets/previews/turning-comparison.gif) uses the same heading trace on both sides: sixteen-pose stepping on the left, inbetweens and blending on the right. Rebuilding the extra artwork needs OpenCV; opening the viewer does not:
 
 ```sh
+python -m pip install -r requirements-viewer.txt
+python scripts/build_turn_inbetweens.py
+python scripts/verify_turn_inbetweens.py
 node scripts/test_gaze.cjs
 node scripts/export_turn_trace.cjs build/turn-trace.json
 python scripts/render_turn_preview.py build/turn-trace.json

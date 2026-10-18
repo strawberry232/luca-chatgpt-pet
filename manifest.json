@@ -119,8 +119,8 @@
     },
     {
       "path": "assets/previews/turning-comparison.gif",
-      "bytes": 2810190,
-      "sha256": "1bd6821bda87548027697f18ad655e80c2d44bedb9dda09d694178387e040eff"
+      "bytes": 8880509,
+      "sha256": "48010b75f1a6ed7c2b65a482326e0105b46109901b67c02bd2a3eacf17b4de52"
     },
     {
       "path": "assets/previews/waiting.gif",
@@ -176,7 +176,17 @@
       "path": "assets/source/profile-right.png",
       "bytes": 29903,
       "sha256": "b4d0978129d2f344ea855c38624db4b780ebe27bd5473ddf7bad71d65463f28f"
+    },
+    {
+      "path": "assets/viewer/look-inbetweens.json",
+      "bytes": 300,
+      "sha256": "8ef64a54ac76b9a61450d57f191963f5554bfd77af26ca2e534d5d3ac8391769"
+    },
+    {
+      "path": "assets/viewer/look-inbetweens.png",
+      "bytes": 4794707,
+      "sha256": "a233c6fc68236c0e5ca545260a6f56e541c76bca2d58e9001b146b5c3df61337"
     }
   ],
-  "viewer_revision": "eased-gaze-v1"
+  "viewer_revision": "motion-compensated-turns-v2"
 }

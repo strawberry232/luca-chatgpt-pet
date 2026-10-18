@@ -13,7 +13,7 @@ const assert = require('node:assert/strict');
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(pathToFileURL(path.resolve('build/luca-preview.html')).href);
-    await page.waitForFunction(() => window.LucaPreview?.getState().loaded);
+    await page.waitForFunction(() => window.LucaPreview?.getState().loaded && LucaPreview.getState().continuousReady);
     const rect = await page.locator('#pet').boundingBox();
     const center = { x: rect.x + rect.width / 2, y: rect.y + rect.height / 2 };
     async function point(degrees) {
@@ -61,6 +61,16 @@ const assert = require('node:assert/strict');
     assert.deepEqual(wrapBackward, [1, 0, 15]);
     const halfTurn = await trace(0, 180);
     assert.equal(halfTurn.length, 9);
+    await settle(90);
+    await page.mouse.move(center.x,center.y);
+    await page.waitForTimeout(60);
+    assert.equal(await page.evaluate(() => LucaPreview.getState().frame.index), 4, 'Crossing the center must hold the gaze, not reset to idle');
+    await settle(0);
+    const exactPixels = await page.locator('#pet').evaluate(canvas => canvas.toDataURL());
+    await settle(6);
+    assert.equal(await page.evaluate(() => LucaPreview.getState().frame.index), 0);
+    const intermediatePixels = await page.locator('#pet').evaluate(canvas => canvas.toDataURL());
+    assert.notEqual(exactPixels, intermediatePixels, 'Rendered pixels must change within one original direction sector');
     await settle(0);
     const jitter = [];
     for (let i = 0; i < 20; i++) {
@@ -93,7 +103,9 @@ const assert = require('node:assert/strict');
     assert.deepEqual(errors, []);
     const report = { ok: true, scope: 'standalone viewer only', quarter_turn: quarterTurn,
       wrap_forward: wrapForward, wrap_backward: wrapBackward, half_turn: halfTurn,
-      boundary_jitter_held: true, directions, demo_mode: true, reduced_motion: true,
+      boundary_jitter_held: true, center_crossing_holds_gaze: true,
+      continuous_pixels_within_sector: true, inbetween_frames: 128,
+      directions, demo_mode: true, reduced_motion: true,
       bilingual_labels: true, narrow_layout: true, browser_errors: errors };
     await fs.writeFile('qa/turn-transition-browser-check.json', JSON.stringify(report, null, 2) + '\n');
     console.log(JSON.stringify(report));

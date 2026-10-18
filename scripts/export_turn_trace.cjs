@@ -7,7 +7,7 @@ for(const segment of segments){
  const target={...frameForIndex(Math.round(segment.degrees/22.5)),targetDegrees:segment.degrees};
  for(let offset=0;offset<segment.duration;offset+=20){
   const frame=controller.update(target,time);
-  frames.push({time_ms:time,duration_ms:20,target_index:target.index,displayed_index:frame.index});time+=20;
+  frames.push({time_ms:time,duration_ms:20,target_index:target.index,displayed_index:frame.index,angle:frame.angle});time+=20;
  }
 }
 const output=JSON.stringify({duration_ms:time,frames},null,2)+'\n';

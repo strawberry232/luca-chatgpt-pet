@@ -10,7 +10,8 @@ Current artwork revision: v6, with only idle row 0 and failure row 5 changed sin
 - `chroma-despill.json`: final edges were already clean, so the final preservation pass used strength 0 and changed no pixels. New source art is transparent. / 最终边缘已干净，保色步骤强度为 0，无像素改色；新原画为透明底。
 - `pet-quality.json`: final gate passed; the existing non-fatal 157.5° → 180° look-continuity warning is unchanged. / 最终质量检查通过，原有 157.5° → 180° 非致命连续性提示仍保留。
 - `viewer-browser-check.json`: all sixteen directions, mode switching, language labels, blink timing and mobile layout passed in an actual headless browser. This verifies the standalone viewer, not ChatGPT global mouse tracking. / 实际浏览器验证十六方向、动作切换、中英文、眨眼节奏和窄屏布局；此结果只针对独立预览页。
-- `turn-transition-browser-check.json`: actual browser checks passed for neighboring-pose turns, shortest-path wraparound, half turns, boundary stability, all sixteen targets, demo playback, reduced motion and narrow layout. The artwork is unchanged. / 实际浏览器通过相邻姿态过渡、最短路线跨界、半圈转向、边界防抖、十六目标、自动演示、减少动态效果及窄屏布局检查；原图未改。
+- `turn-transition-browser-check.json`: browser checks cover continuous rendered pixel changes inside a single original sector, loading all 128 inbetweens, shortest-path wraparound, half turns, status-index boundary stability, all sixteen targets, demo playback, reduced motion and narrow layout. / 浏览器验证原扇区内的实际连续画面变化、128 帧加载、最短路线跨界、半圈转向、状态索引防抖、十六目标、演示、减少动态效果和窄屏布局。
+- `turn-inbetweens.json`: the viewer-only sheet preserves all sixteen original endpoint cells and adds 112 warped frames. Adjacent image differences are reported as a numerical reference, not proof of naturalness. The native atlas hash is unchanged. / 预览专用素材保留十六个原始端点并增加 112 帧形变；相邻差值仅作数值参考，不证明动作自然；原生图集哈希保持不变。
 
 `archive-v5/` holds earlier profile-running checks. Reports with machine-local paths have been sanitized. `scripts/verify.py` checks the current asset hashes, occupied cells, preserved rows and optional rebuilt-image parity; it does not judge visual naturalness.
 

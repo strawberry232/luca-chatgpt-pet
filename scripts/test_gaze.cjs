@@ -32,4 +32,11 @@ const paused=createGazeController();paused.update(target(0),0);const afterPause=
 assert.ok([0,1,15].includes(afterPause.index),'A tab pause must not jump to a distant pose');
 paused.update(null,10016);assert.equal(paused.getState().angle,null);
 assert.equal(paused.update(target(90),10032).index,4);
+const reversal=createGazeController();reversal.update(target(0),0);
+for(let time=16;time<=160;time+=16)reversal.update(target(90),time);
+const beforeReversal=reversal.getState().velocity;
+reversal.update(target(270),161);
+const afterReversal=reversal.getState().velocity;
+assert.ok(beforeReversal>0 && afterReversal>0,'Reversals must brake existing momentum instead of resetting it');
+assert.ok(Math.abs(afterReversal-beforeReversal)<=2.601,'Reversal acceleration must remain bounded');
 console.log('PASS: eased neighboring turns, both wrap directions, shortest half-turn, boundary stability and pause/reset behavior');

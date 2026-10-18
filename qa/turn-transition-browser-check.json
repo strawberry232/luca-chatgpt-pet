@@ -30,6 +30,9 @@
     8
   ],
   "boundary_jitter_held": true,
+  "center_crossing_holds_gaze": true,
+  "continuous_pixels_within_sector": true,
+  "inbetween_frames": 128,
   "directions": [
     0,
     1,

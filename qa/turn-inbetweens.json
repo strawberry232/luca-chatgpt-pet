@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "scope": "viewer-only interpolation, not a judgment of naturalness",
+  "native_atlas_sha256": "ff07946f3536678478ba0ea650e16335d629c6fd635e8435323aa925947a342a",
+  "original_endpoints_exact": 16,
+  "additional_frames": 112,
+  "mean_adjacent_rgb_difference_original": 15.070058981625502,
+  "mean_adjacent_rgb_difference_inbetweens": 3.5771228067236005,
+  "max_adjacent_rgb_difference_original": 25.192896706626026,
+  "max_adjacent_rgb_difference_inbetweens": 6.567321865311296
+}
