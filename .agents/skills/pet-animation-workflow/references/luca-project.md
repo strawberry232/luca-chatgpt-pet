@@ -9,7 +9,10 @@
 | `assets/source/profile-left.png` / `profile-right.png` | 已做一次性配色校准的侧身原画 |
 | `assets/source/base-spritesheet.png` | v5 修订之前的基准，仅用于复现这一轮 |
 | `scripts/build_profile_run.py` | 为这两张原画标定的固定关节与图层绑定 |
-| `scripts/rebuild.py` | 重建第 1、2 行跑步 |
+| `scripts/rebuild.py` | 先重建第 1、2 行跑步，再修复第 0、5 行待机/失落 |
+| `assets/source/pre-face-repair.png` | 表情修订前的 v5 基准，用于验证 v6 仅修改第 0、5 行 |
+| `scripts/build_emotion_idle.py` | 原待机头发、头部及衣服复用；仅替换小范围眼皮/嘴部 |
+| `viewer/index.html` | 已实现窗口内十六方向鼠标跟随的离线预览 |
 | `scripts/verify.py` | 现有哈希、保留行及可选重建一致性检查 |
 | `scripts/package_petdex.py` | 用 `petdex/pet.json` 生成投稿 ZIP |
 | `assets/previews/` | 九种状态、十六方向、配色对照 |
@@ -32,5 +35,7 @@ python scripts/package_petdex.py
 当前跑步采用头、领口、身体、上下臂、大腿、小腿和鞋的层级变换，每方向八帧。近远腿复用对称衣服材质，通过遮挡表现深度，配色只校准一次。现有报告中棕发内部中位色差约每通道 1/255，不代表所有材质或像素都与正面相同。
 
 用户已在本项目明确选择原图拆层并要求完整侧身；这不是其他角色任务的自动授权。现有绑定坐标写死于两张原画，不是通用自动绑定器。
+
+v6 修订将失落统一到原待机头部大小和发色，使用同一原图头部作整数像素位移，不逐帧缩放头部。原生客户端 26.1013.4894.0 的待机时长有六倍放大，最短闭眼槽位为 660 毫秒；独立预览可用 75 毫秒，但不能声称改了原生帧率。十六方向图已齐备，预览已接鼠标事件；原生浮窗的输入目标由客户端决定，不把窗口内跟随说成全局桌面跟随。详见项目 `docs/MOUSE_TRACKING.zh-CN.md`。
 
 本素材是非官方《第五人格》同人。描述可说明九种动画和十六方向，但不能承诺关键词触发。`review`“检查成果”是动作标签，客户端对应关系需文档或实测佐证。参考视频 Live2DViewerEX / BongoCat 的交互不自动属于本图集。

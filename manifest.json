@@ -1,26 +1,66 @@
 {
-  "art_revision": "v5-full-profile",
+  "art_revision": "v6-canonical-idle-failure",
   "atlas_format": 2,
   "files": [
     {
       "path": "assets/luca-v2.png",
-      "bytes": 2455360,
-      "sha256": "ef388cc49b36bb56f24e8fea7a3cf63c10175c775d29a24fba26d2d89e5548d9"
+      "bytes": 2025049,
+      "sha256": "ff07946f3536678478ba0ea650e16335d629c6fd635e8435323aa925947a342a"
     },
     {
       "path": "assets/previews/all-states.gif",
-      "bytes": 2191021,
-      "sha256": "f3736436957305d4d86db37d8163df0c1abcd18682deccb75cfe4678514ed376"
+      "bytes": 2103846,
+      "sha256": "bff6d1b0dcd054d829a1e7056ceb186176024de512bd1b6aeb60d556f1af90d7"
     },
     {
       "path": "assets/previews/all-states.mp4",
-      "bytes": 1202041,
-      "sha256": "2ef22087949884c76af575d0bfee4eff4efd548c4e101c23eab4b507d1edf18c"
+      "bytes": 1280168,
+      "sha256": "838a835218466dfc09bd2c58455ccd7556be027b782b595d01d86f5ba426bd4b"
+    },
+    {
+      "path": "assets/previews/failed-before-after.gif",
+      "bytes": 640502,
+      "sha256": "3491c05fbcf7212dcd0b822746e1a30ca9ecdce6b00581d31d9d2a9aad19e62d"
+    },
+    {
+      "path": "assets/previews/failed-keyframes.png",
+      "bytes": 64727,
+      "sha256": "7ab0f6bdf94302a7931fd372f6fd97482e980f7031d872ea07cf7b2a9b0fa0b8"
     },
     {
       "path": "assets/previews/failed.gif",
-      "bytes": 74403,
-      "sha256": "cd9114a5db482f392df28e34a28d7d0899dd4ef78a2a1b510bb5f0369d20843f"
+      "bytes": 279196,
+      "sha256": "7ff487ee1b19b7d893953a77457d5a9f033dd54bf7f6c1cc5d5a68302e1876cb"
+    },
+    {
+      "path": "assets/previews/idle-before-after.gif",
+      "bytes": 464506,
+      "sha256": "ed5a60511a25165ace60705013b67eecd2c590a3103844cc03f92a934ec3c646"
+    },
+    {
+      "path": "assets/previews/idle-client-preview.gif",
+      "bytes": 208211,
+      "sha256": "45b20647aa25923800ddc8bf7fb0855002e2ec048f0a87edc347c87fe903dbba"
+    },
+    {
+      "path": "assets/previews/idle-failed-still.png",
+      "bytes": 65191,
+      "sha256": "2772b31906f085da77689c0e7e423490bc37e1fc75cae33eb2afd156d27f47dd"
+    },
+    {
+      "path": "assets/previews/idle-jump-idle.gif",
+      "bytes": 265458,
+      "sha256": "444437718f5321ddb96b2d6f7a84e939ade0826f5f12c8dfeb267c1f32d0722c"
+    },
+    {
+      "path": "assets/previews/idle-keyframes.png",
+      "bytes": 49222,
+      "sha256": "756d38b0e46aedc6adf13cecfdecab55583d9a2d94cbd1ba8866254eab008713"
+    },
+    {
+      "path": "assets/previews/idle-natural-preview.gif",
+      "bytes": 210556,
+      "sha256": "bf6f3b6722cd4253077ae64ac4607be080936af0ce1e5e7a9444267f54700eb5"
     },
     {
       "path": "assets/previews/idle-running-comparison.gif",
@@ -29,13 +69,13 @@
     },
     {
       "path": "assets/previews/idle.gif",
-      "bytes": 53603,
-      "sha256": "a557cdfa36b1f08e700e3d107f29ed3a4703c9388e205e7755c3316be7815e96"
+      "bytes": 200934,
+      "sha256": "cd7eb2f33a8f3abed00a9ccf8679cf80f487a97208f45f82d6395bd66229efe6"
     },
     {
       "path": "assets/previews/jumping.gif",
-      "bytes": 40252,
-      "sha256": "1d45ca8a8a7e1de646cfbad5ece1f85205f1a7a9150fdb835a004bced69d2e66"
+      "bytes": 179539,
+      "sha256": "45bcc0d7db4d515b03224bb56c6b24fcbef097e4ec2ba8921efd57cf016b1b08"
     },
     {
       "path": "assets/previews/look-directions.png",
@@ -44,13 +84,13 @@
     },
     {
       "path": "assets/previews/look-loop.gif",
-      "bytes": 139855,
-      "sha256": "c223e25c132198ce456d8f5311c6dfe09d37e978437963afea994061a7e507f1"
+      "bytes": 654582,
+      "sha256": "87adbf00069f97c90ddfd30a4385f76f8a06ac3c2bd5f9a1d3bcd40387e5b6dd"
     },
     {
       "path": "assets/previews/review.gif",
-      "bytes": 52551,
-      "sha256": "3f6f2b1a799b844a7dc743c97eac5ce346a331530a9768d36172f49b7c2c8e79"
+      "bytes": 253629,
+      "sha256": "677521ef78cc7ad2208f2cbaa66d18a6f1e123d79a67a05179869c60a4afb811"
     },
     {
       "path": "assets/previews/running-keyframes.png",
@@ -59,18 +99,18 @@
     },
     {
       "path": "assets/previews/running-left.gif",
-      "bytes": 60107,
-      "sha256": "69f3266e268ee0465b91db8486f768fcd6bc1407bdd423339eb6e0ea66d8b62c"
+      "bytes": 272820,
+      "sha256": "aeacaf2be811b8bf8474ca6ecbb103b7a3dfe92d086cfec1afd41263095022db"
     },
     {
       "path": "assets/previews/running-right.gif",
-      "bytes": 59494,
-      "sha256": "6ca6123c6455ec3fc54948e6f4375c06d3a4879f1c771c5ea0677a03f89a874b"
+      "bytes": 272418,
+      "sha256": "c4e15473a6a1fe1c27931b350860b86f51e08da4cd11b95319e1311756fe8898"
     },
     {
       "path": "assets/previews/running.gif",
-      "bytes": 52956,
-      "sha256": "75f1805832a180c2b4bb6788f8bdb36c61cd454389258378f14bbaca2c981710"
+      "bytes": 240766,
+      "sha256": "c830bf8d6a3709c72000f7bbc226b78e0324362d8c798955b2758d35802dfeb7"
     },
     {
       "path": "assets/previews/side-running.gif",
@@ -79,13 +119,13 @@
     },
     {
       "path": "assets/previews/waiting.gif",
-      "bytes": 53068,
-      "sha256": "d207b598bd4976454f6436ebb531caf3b5f40432583c8383a8252dfcfab98a47"
+      "bytes": 238738,
+      "sha256": "a7e6852059978fae676b838a8cd1a1745282b765c1c15bfc672569f32f7c89e7"
     },
     {
       "path": "assets/previews/waving.gif",
-      "bytes": 35693,
-      "sha256": "8cd17b10253638014ac73cbc0066a954530bb5f8992b49a7911710d09a731c7f"
+      "bytes": 166070,
+      "sha256": "aa6fd5efa60e6040a74e76e62be77210f4c37ca9cd51d647f608656d5ba76343"
     },
     {
       "path": "assets/source/base-spritesheet.png",
@@ -93,9 +133,34 @@
       "sha256": "4560815f18dbbf4af091a3d31efdf425a54ca8ec9293fc725db30500500ec415"
     },
     {
+      "path": "assets/source/expression-closed-blink.png",
+      "bytes": 37686,
+      "sha256": "ca5d7afa34aedcdeb6b9aaddea2fb0a91c95df7071698622a7a8bcf5d6b13178"
+    },
+    {
+      "path": "assets/source/expression-disappointed.png",
+      "bytes": 38226,
+      "sha256": "f8abc468b1d5a5a56fc27d8e1dca05fb2c474f5cdad78fe31d81611372171830"
+    },
+    {
+      "path": "assets/source/expression-half-blink.png",
+      "bytes": 37971,
+      "sha256": "be389e38adc76f9a42d544c2c98faa123ded84e357a038681c93dca243ef97c1"
+    },
+    {
+      "path": "assets/source/expression-strip.png",
+      "bytes": 906590,
+      "sha256": "33dba8ffaaa9db12e1cbca67ebc432eaebd88ca195405f0e2388768ed687f125"
+    },
+    {
       "path": "assets/source/idle.png",
       "bytes": 39921,
       "sha256": "96beaf1a5d5a60f02eac906ee82f20f8277937dea8e68991e5a970dddbcd3b82"
+    },
+    {
+      "path": "assets/source/pre-face-repair.png",
+      "bytes": 2455360,
+      "sha256": "ef388cc49b36bb56f24e8fea7a3cf63c10175c775d29a24fba26d2d89e5548d9"
     },
     {
       "path": "assets/source/profile-left.png",

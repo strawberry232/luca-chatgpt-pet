@@ -26,6 +26,10 @@ The initial desktop Live2D route changed when the goal became a pet inside ChatG
 7. Validate atlas geometry, alpha, occupied cells, key-color edges and continuity; inspect native-size GIFs, run keyframes and idle/run comparisons. Record results in `qa/`.
 8. In a supported Pets environment, validate, upload and update the intended pet, preserving its identity. Activation is a separate choice; account-specific IDs and upload URLs are excluded from this repository.
 
+## v6 idle and failure repair
+
+The later v6 repair reuses the approved idle hair, head silhouette and costume at their original scale, changes only small eyelid/mouth patches, and translates the head a few pixels for disappointment. Only rows 0 and 5 changed from v5. The sixteen look poses were reused in a working offline pointer-tracking viewer; native tracking and timing limitations are documented in [MOUSE_TRACKING.md](MOUSE_TRACKING.md).
+
 ## Tools and plugin roles
 
 | Tool | Role and limits |

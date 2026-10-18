@@ -14,18 +14,27 @@
   ],
   "errors": [],
   "warnings": [
-    "running-right used extraction method manual-profile-rig; component extraction is preferred",
-    "running-left used extraction method manual-profile-rig; component extraction is preferred"
+    "idle used extraction method user-authorized-canonical-layer-repair; component extraction is preferred",
+    "running-right used extraction method preserved-approved-atlas; component extraction is preferred",
+    "running-left used extraction method preserved-approved-atlas; component extraction is preferred",
+    "waving used extraction method preserved-approved-atlas; component extraction is preferred",
+    "jumping used extraction method preserved-approved-atlas; component extraction is preferred",
+    "failed used extraction method user-authorized-canonical-layer-repair; component extraction is preferred",
+    "waiting used extraction method preserved-approved-atlas; component extraction is preferred",
+    "running used extraction method preserved-approved-atlas; component extraction is preferred",
+    "review used extraction method preserved-approved-atlas; component extraction is preferred"
   ],
   "rows": [
     {
       "state": "idle",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": null,
+      "extraction_method": "user-authorized-canonical-layer-repair",
       "ok": true,
       "errors": [],
-      "warnings": [],
+      "warnings": [
+        "idle used extraction method user-authorized-canonical-layer-repair; component extraction is preferred"
+      ],
       "frames": [
         {
           "index": 0,
@@ -47,7 +56,7 @@
           "file": "frames/idle/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14229,
+          "nontransparent_pixels": 14321,
           "bbox": [
             34,
             5,
@@ -62,7 +71,7 @@
           "file": "frames/idle/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14214,
+          "nontransparent_pixels": 14321,
           "bbox": [
             34,
             5,
@@ -77,10 +86,10 @@
           "file": "frames/idle/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14221,
+          "nontransparent_pixels": 14321,
           "bbox": [
             34,
-            5,
+            4,
             158,
             203
           ],
@@ -92,10 +101,10 @@
           "file": "frames/idle/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14224,
+          "nontransparent_pixels": 14321,
           "bbox": [
             34,
-            5,
+            4,
             158,
             203
           ],
@@ -107,7 +116,7 @@
           "file": "frames/idle/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14248,
+          "nontransparent_pixels": 14321,
           "bbox": [
             34,
             5,
@@ -123,11 +132,11 @@
       "state": "running-right",
       "expected_frames": 8,
       "actual_frames": 8,
-      "extraction_method": "manual-profile-rig",
+      "extraction_method": "preserved-approved-atlas",
       "ok": true,
       "errors": [],
       "warnings": [
-        "running-right used extraction method manual-profile-rig; component extraction is preferred"
+        "running-right used extraction method preserved-approved-atlas; component extraction is preferred"
       ],
       "frames": [
         {
@@ -256,11 +265,11 @@
       "state": "running-left",
       "expected_frames": 8,
       "actual_frames": 8,
-      "extraction_method": "manual-profile-rig",
+      "extraction_method": "preserved-approved-atlas",
       "ok": true,
       "errors": [],
       "warnings": [
-        "running-left used extraction method manual-profile-rig; component extraction is preferred"
+        "running-left used extraction method preserved-approved-atlas; component extraction is preferred"
       ],
       "frames": [
         {
@@ -389,10 +398,12 @@
       "state": "waving",
       "expected_frames": 4,
       "actual_frames": 4,
-      "extraction_method": null,
+      "extraction_method": "preserved-approved-atlas",
       "ok": true,
       "errors": [],
-      "warnings": [],
+      "warnings": [
+        "waving used extraction method preserved-approved-atlas; component extraction is preferred"
+      ],
       "frames": [
         {
           "index": 0,
@@ -460,10 +471,12 @@
       "state": "jumping",
       "expected_frames": 5,
       "actual_frames": 5,
-      "extraction_method": null,
+      "extraction_method": "preserved-approved-atlas",
       "ok": true,
       "errors": [],
-      "warnings": [],
+      "warnings": [
+        "jumping used extraction method preserved-approved-atlas; component extraction is preferred"
+      ],
       "frames": [
         {
           "index": 0,
@@ -546,21 +559,23 @@
       "state": "failed",
       "expected_frames": 8,
       "actual_frames": 8,
-      "extraction_method": null,
+      "extraction_method": "user-authorized-canonical-layer-repair",
       "ok": true,
       "errors": [],
-      "warnings": [],
+      "warnings": [
+        "failed used extraction method user-authorized-canonical-layer-repair; component extraction is preferred"
+      ],
       "frames": [
         {
           "index": 0,
           "file": "frames/failed/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15801,
+          "nontransparent_pixels": 14321,
           "bbox": [
-            23,
+            34,
             5,
-            168,
+            158,
             203
           ],
           "edge_pixels": 0,
@@ -571,11 +586,11 @@
           "file": "frames/failed/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 16166,
+          "nontransparent_pixels": 14285,
           "bbox": [
-            23,
-            5,
-            167,
+            34,
+            6,
+            158,
             203
           ],
           "edge_pixels": 0,
@@ -586,11 +601,11 @@
           "file": "frames/failed/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15461,
+          "nontransparent_pixels": 14180,
           "bbox": [
-            23,
-            21,
-            168,
+            34,
+            8,
+            158,
             203
           ],
           "edge_pixels": 0,
@@ -601,11 +616,11 @@
           "file": "frames/failed/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13668,
+          "nontransparent_pixels": 14114,
           "bbox": [
-            24,
-            45,
-            167,
+            34,
+            10,
+            158,
             203
           ],
           "edge_pixels": 0,
@@ -616,11 +631,11 @@
           "file": "frames/failed/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 16355,
+          "nontransparent_pixels": 14114,
           "bbox": [
-            22,
-            6,
-            168,
+            34,
+            10,
+            158,
             203
           ],
           "edge_pixels": 0,
@@ -631,11 +646,11 @@
           "file": "frames/failed/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 16321,
+          "nontransparent_pixels": 14180,
           "bbox": [
-            22,
-            5,
-            168,
+            34,
+            8,
+            158,
             203
           ],
           "edge_pixels": 0,
@@ -646,11 +661,11 @@
           "file": "frames/failed/06.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 16149,
+          "nontransparent_pixels": 14285,
           "bbox": [
-            23,
-            5,
-            168,
+            34,
+            6,
+            158,
             203
           ],
           "edge_pixels": 0,
@@ -661,11 +676,11 @@
           "file": "frames/failed/07.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 16262,
+          "nontransparent_pixels": 14321,
           "bbox": [
-            22,
+            34,
             5,
-            169,
+            158,
             203
           ],
           "edge_pixels": 0,
@@ -677,10 +692,12 @@
       "state": "waiting",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": null,
+      "extraction_method": "preserved-approved-atlas",
       "ok": true,
       "errors": [],
-      "warnings": [],
+      "warnings": [
+        "waiting used extraction method preserved-approved-atlas; component extraction is preferred"
+      ],
       "frames": [
         {
           "index": 0,
@@ -778,10 +795,12 @@
       "state": "running",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": null,
+      "extraction_method": "preserved-approved-atlas",
       "ok": true,
       "errors": [],
-      "warnings": [],
+      "warnings": [
+        "running used extraction method preserved-approved-atlas; component extraction is preferred"
+      ],
       "frames": [
         {
           "index": 0,
@@ -879,10 +898,12 @@
       "state": "review",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": null,
+      "extraction_method": "preserved-approved-atlas",
       "ok": true,
       "errors": [],
-      "warnings": [],
+      "warnings": [
+        "review used extraction method preserved-approved-atlas; component extraction is preferred"
+      ],
       "frames": [
         {
           "index": 0,

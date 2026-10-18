@@ -1,0 +1,93 @@
+{
+  "ok": true,
+  "preview": "standalone browser preview only",
+  "atlas_sha256": "ff07946f3536678478ba0ea650e16335d629c6fd635e8435323aa925947a342a",
+  "directions": [
+    {
+      "index": 0,
+      "row": 9,
+      "column": 0
+    },
+    {
+      "index": 1,
+      "row": 9,
+      "column": 1
+    },
+    {
+      "index": 2,
+      "row": 9,
+      "column": 2
+    },
+    {
+      "index": 3,
+      "row": 9,
+      "column": 3
+    },
+    {
+      "index": 4,
+      "row": 9,
+      "column": 4
+    },
+    {
+      "index": 5,
+      "row": 9,
+      "column": 5
+    },
+    {
+      "index": 6,
+      "row": 9,
+      "column": 6
+    },
+    {
+      "index": 7,
+      "row": 9,
+      "column": 7
+    },
+    {
+      "index": 8,
+      "row": 10,
+      "column": 0
+    },
+    {
+      "index": 9,
+      "row": 10,
+      "column": 1
+    },
+    {
+      "index": 10,
+      "row": 10,
+      "column": 2
+    },
+    {
+      "index": 11,
+      "row": 10,
+      "column": 3
+    },
+    {
+      "index": 12,
+      "row": 10,
+      "column": 4
+    },
+    {
+      "index": 13,
+      "row": 10,
+      "column": 5
+    },
+    {
+      "index": 14,
+      "row": 10,
+      "column": 6
+    },
+    {
+      "index": 15,
+      "row": 10,
+      "column": 7
+    }
+  ],
+  "mode_switching": true,
+  "bilingual_labels": true,
+  "natural_closed_frame_ms": 75,
+  "client_closed_frame_ms": 660,
+  "mobile_no_horizontal_overflow": true,
+  "browser_errors": []
+}

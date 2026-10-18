@@ -1,0 +1,168 @@
+{
+  "method": "User-authorized manual color calibration of newly drawn profile anchors to original idle material medians; each animation uses its calibrated anchor without per-frame recoloring",
+  "records": [
+    {
+      "state": "running-left",
+      "material_palette_mapping": {
+        "hair": {
+          "before": [
+            82.0,
+            41.0,
+            38.0
+          ],
+          "target": [
+            82.0,
+            48.0,
+            43.0
+          ],
+          "after": [
+            82.0,
+            48.0,
+            43.0
+          ]
+        },
+        "cloth_light": {
+          "before": [
+            213.0,
+            210.0,
+            210.0
+          ],
+          "target": [
+            209.0,
+            207.0,
+            207.0
+          ],
+          "after": [
+            209.0,
+            207.0,
+            207.0
+          ]
+        },
+        "skin": {
+          "before": [
+            252.0,
+            224.0,
+            220.0
+          ],
+          "target": [
+            253.0,
+            225.0,
+            219.0
+          ],
+          "after": [
+            253.0,
+            225.0,
+            219.0
+          ]
+        },
+        "purple": {
+          "before": [
+            137.0,
+            83.0,
+            139.0
+          ],
+          "target": [
+            133.0,
+            86.0,
+            145.0
+          ],
+          "after": [
+            133.0,
+            86.0,
+            145.0
+          ]
+        },
+        "eye_gray": {
+          "before": [
+            109.5,
+            107.5,
+            108.5
+          ],
+          "target": [
+            118.0,
+            117.5,
+            117.0
+          ],
+          "after": [
+            118.0,
+            117.5,
+            117.0
+          ]
+        }
+      }
+    },
+    {
+      "state": "running-right",
+      "material_palette_mapping": {
+        "hair": {
+          "before": [
+            82.0,
+            41.0,
+            38.0
+          ],
+          "target": [
+            82.0,
+            48.0,
+            43.0
+          ],
+          "after": [
+            82.0,
+            48.0,
+            43.0
+          ]
+        },
+        "cloth_light": {
+          "before": [
+            213.0,
+            210.0,
+            210.0
+          ],
+          "target": [
+            209.0,
+            207.0,
+            207.0
+          ],
+          "after": [
+            209.0,
+            207.0,
+            207.0
+          ]
+        },
+        "skin": {
+          "before": [
+            252.0,
+            226.0,
+            222.0
+          ],
+          "target": [
+            253.0,
+            225.0,
+            219.0
+          ],
+          "after": [
+            253.0,
+            225.0,
+            219.0
+          ]
+        },
+        "eye_gray": {
+          "before": [
+            108.0,
+            106.0,
+            105.0
+          ],
+          "target": [
+            118.0,
+            117.5,
+            117.0
+          ],
+          "after": [
+            118.0,
+            117.0,
+            117.0
+          ]
+        }
+      }
+    }
+  ]
+}

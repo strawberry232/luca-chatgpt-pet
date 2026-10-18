@@ -1,14 +1,16 @@
 # Quality evidence / 质量检查
 
-These are archived checks from the final v5 production run; machine-local paths have been replaced with relative labels. They are not newly performed by `scripts/verify.py`.
+Current artwork revision: v6, with only idle row 0 and failure row 5 changed since v5. The other nine rows, including side-profile running and all sixteen look poses, remain exact RGBA matches. The neutral idle frame is also unchanged.
 
-这些 JSON 是最终 v5 制作过程的实际检查记录，本机绝对路径已经替换为相对标签；不是运行 `scripts/verify.py` 时重新执行的全部检查。
+当前为 v6 修订，仅修改待机第 0 行和失落第 5 行；其余九行，包括侧身跑步和十六方向，逐像素保留。待机第 0 帧仍为原图。
 
-- `atlas-validation.json`: correct v2 geometry; no opaque key-color pixels, chroma fringe or hidden transparent RGB. / 图集尺寸、色键绿边及透明像素检查通过。
-- `preserved-rows.json`: all nine non-running rows remain exact RGBA matches. / 跑步以外九行逐像素保留。
-- `rig-color-connectivity.json`: all sixteen run frames have no extra disconnected component of eight or more pixels; interior brown hair median differs from idle by at most 1/255 per channel. This is not a claim that every material pixel matches the front view. / 十六帧未出现至少八像素的额外断开块，内部棕发中位色差不超过每通道 1/255，不代表正侧面所有材质像素完全相同。
-- `side-palette-matching.json`: one-time material calibration of profile anchors. / 侧身原画的一次性材质配色校准。
-- `pet-quality.json`: existing look-pose checks include a non-fatal warning around 157.5° → 180°; these poses were preserved. / 原有注视姿态在 157.5° → 180° 附近有非致命警告，相关姿态未改动。
-- `standard-frame-review.json`: documents the manual rig approach; generated anatomical component metadata is not available for these manually cut layers. / 记录手工分层绑定方式，不能把它声称为逐帧 AI 组件验收。
+- `atlas-validation.json`: final v2 dimensions, transparency and chroma checks passed. / 最终图集的尺寸、透明度和绿边检查通过。
+- `identity-and-timing.json`: unscaled canonical head/hair and costume reused; integer translation only; actual client timing versus preview timing documented. / 复用待机头发、头部和衣服，仅作整数像素位移；记录真实客户端与预览节奏的区别。
+- `standard-frame-review.json`: final frame review passed, with expected warnings about authorized manual layering and preserved atlas extraction. / 帧检查通过，包含手工分层及保留原帧的方式提示。
+- `chroma-despill.json`: final edges were already clean, so the final preservation pass used strength 0 and changed no pixels. New source art is transparent. / 最终边缘已干净，保色步骤强度为 0，无像素改色；新原画为透明底。
+- `pet-quality.json`: final gate passed; the existing non-fatal 157.5° → 180° look-continuity warning is unchanged. / 最终质量检查通过，原有 157.5° → 180° 非致命连续性提示仍保留。
+- `viewer-browser-check.json`: all sixteen directions, mode switching, language labels, blink timing and mobile layout passed in an actual headless browser. This verifies the standalone viewer, not ChatGPT global mouse tracking. / 实际浏览器验证十六方向、动作切换、中英文、眨眼节奏和窄屏布局；此结果只针对独立预览页。
 
-`scripts/verify.py` independently checks the shipped assets, hashes, cell occupancy, transparent pixels, unchanged rows and optional rebuilt-image parity. It does not assess whether a viewer finds the motion natural. / 仓库验证脚本独立检查素材、哈希、格子占用、透明像素、保留行及可选的重建一致性；动作是否自然仍需人工观看。
+`archive-v5/` holds earlier profile-running checks. Reports with machine-local paths have been sanitized. `scripts/verify.py` checks the current asset hashes, occupied cells, preserved rows and optional rebuilt-image parity; it does not judge visual naturalness.
+
+`archive-v5/` 保留上一轮侧身跑步检查；本机路径已清理。验证脚本检查当前素材哈希、有效格、保留行和可选重建一致性，不替代人工观感判断。

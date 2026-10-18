@@ -6,7 +6,7 @@ An unofficial Identity V Prisoner / Luca animated pet asset project for ChatGPT 
 
 ![Side-profile running](assets/previews/side-running.gif)
 
-The final atlas is [assets/luca-v2.png](assets/luca-v2.png): transparent RGBA PNG, 1536 × 2288, eight columns × eleven rows, 192 × 208 per cell. There are 57 animation frames and 16 look poses; 15 unused cells stay transparent. “v2” describes the Pets atlas format; this artwork revision is v5.
+The final atlas is [assets/luca-v2.png](assets/luca-v2.png): transparent RGBA PNG, 1536 × 2288, eight columns × eleven rows, 192 × 208 per cell. There are 57 animation frames and 16 look poses; 15 unused cells stay transparent. “v2” describes the Pets atlas format; this artwork revision is v6.
 
 ## Preview
 
@@ -21,6 +21,12 @@ The final atlas is [assets/luca-v2.png](assets/luca-v2.png): transparent RGBA PN
 In an environment with the Pets plugin and custom pet upload support, provide `assets/luca-v2.png` and ask the Pets workflow to validate it and create or update a custom pet. Select the pet separately if you want to activate it. This repository is the artwork and build pipeline; it does not add a new import button, client event hooks or keyword commands. Availability depends on the client and account.
 
 The client chooses animations from work activity. **Nine included states do not imply nine user commands.** The exact mapping of the `review` row to the client's Ready state is unconfirmed. See [state meanings and triggers](docs/STATES.md).
+
+## Mouse tracking and blink preview
+
+Open [the interactive viewer](viewer/index.html) locally, or run `python scripts/build_interactive_preview.py` to make `build/luca-preview.html`, a standalone file with the atlas embedded. Pointer tracking inside this page is implemented and tested in all sixteen directions.
+
+The native ChatGPT client controls its own tracking targets and idle timing. This project cannot enable global mouse tracking or change native frame timing by uploading an atlas. The repaired idle uses one closed frame instead of two half/closed frames; the current client still holds that frame for about 660 ms. The viewer also offers a natural 75 ms blink mode, explicitly separate from native behavior. See [support and limits](docs/MOUSE_TRACKING.md).
 
 ## Submit to Petdex
 
@@ -42,7 +48,7 @@ python scripts/rebuild.py
 python scripts/verify.py
 ```
 
-The build writes `build/luca-v2.png`, two eight-frame cycles, reusable layer PNGs and motion parameters. It uses the two already calibrated side-view anchors, rotates hierarchical joints and replaces only the running rows in the baseline atlas. Verification compares the rebuilt image against the shipped image pixel for pixel, checks transparency, occupied cells and asset hashes. It requires no API key or image generation service.
+The build writes `build/luca-v2.png`, two eight-frame cycles, reusable layer PNGs and motion parameters. It rebuilds the two side-profile running rows, then reuses the canonical idle head and costume to repair idle and disappointment. The latest v6 change preserves all nine other rows from v5. Verification compares the rebuilt image against the shipped image pixel for pixel, checks transparency, occupied cells and asset hashes. It requires no API key or image generation service.
 
 ## Reusable skill
 
@@ -54,7 +60,7 @@ The standalone helper requires Pillow. Run `python scripts/test_pet_skill.py` to
 
 ## Production notes
 
-The torso, head, arms, shorts, wraps and boots all face sideways. Arm bandage placement follows anatomical sides. Each run cycle reuses fixed source textures; limb depth uses occlusion instead of alternating dark tints. Edges still change through interpolation. Existing non-running animation rows are preserved exactly.
+The torso, head, arms, shorts, wraps and boots all face sideways. Arm bandage placement follows anatomical sides. Each run cycle reuses fixed source textures; limb depth uses occlusion instead of alternating dark tints. Edges still change through interpolation. The v6 expression repair changes only idle and disappointment; all nine other rows remain unchanged from v5.
 
 - [Workflow, tools and evidence boundaries](docs/WORKFLOW.md)
 - [State layout and trigger limitations](docs/STATES.md)

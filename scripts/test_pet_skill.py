@@ -36,6 +36,15 @@ class PetSkillChecks(unittest.TestCase):
         self.assertTrue(report['ok'])
         self.assertEqual((report['spriteVersionNumber'], report['used_cells']), (1, 57))
 
+    def test_failed_head_reuses_canonical_hair_without_scaling(self):
+        with Image.open(ROOT/'assets/source/pre-face-repair.png') as before, Image.open(self.atlas) as after:
+            canonical = before.crop((0, 0, 192, 208))
+            self.assertEqual(after.crop((0, 0, 192, 208)).tobytes(), canonical.tobytes())
+            hair = canonical.crop((30, 4, 170, 70)).tobytes()
+            for column, shift in enumerate([0, 1, 3, 5, 5, 3, 1, 0]):
+                candidate = after.crop((column*192+30, 5*208+4+shift, column*192+170, 5*208+70+shift))
+                self.assertEqual(candidate.tobytes(), hair, f'Failure frame {column}: canonical hair changed')
+
     def test_zip_root_manifest_and_unchanged_atlas(self):
         output = self.folder/'pet.zip'
         TOOLS.package_atlas(self.atlas, self.manifest, output)
@@ -60,17 +69,17 @@ class PetSkillChecks(unittest.TestCase):
                 self.assertFalse((self.folder/'bad.zip').exists())
 
     def test_unapproved_row_change_is_detected(self):
-        before = ROOT/'assets/source/base-spritesheet.png'
-        report = TOOLS.compare_atlases(before, self.atlas, [1, 2])
+        before = ROOT/'assets/source/pre-face-repair.png'
+        report = TOOLS.compare_atlases(before, self.atlas, [0, 5])
         self.assertTrue(report['ok'])
-        self.assertEqual(report['changed_rows'], [1, 2])
+        self.assertEqual(report['changed_rows'], [0, 5])
         path = self.folder/'changed-idle.png'
         with Image.open(self.atlas) as image:
-            image.putpixel((96, 100), (255, 0, 0, 255))
+            image.putpixel((96, 3*208+100), (255, 0, 0, 255))
             image.save(path)
-        report = TOOLS.compare_atlases(before, path, [1, 2])
+        report = TOOLS.compare_atlases(before, path, [0, 5])
         self.assertFalse(report['ok'])
-        self.assertEqual(report['unexpected_changed_rows'], [0])
+        self.assertEqual(report['unexpected_changed_rows'], [3])
 
     def test_unused_cell_and_transparent_rgb_are_reported(self):
         path = self.folder/'bad-alpha.png'
