@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "changed_state": "idle",
+  "changed_frame": 1,
+  "changed_pixels": 823,
+  "remaining_ten_rows_exact_rgba": true,
+  "other_idle_frames_exact_rgba": true,
+  "reuses_approved_full_closed_eye_art": true,
+  "native_timing_override": false
+}

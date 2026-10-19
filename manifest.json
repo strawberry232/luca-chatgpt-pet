@@ -1,23 +1,28 @@
 {
   "art_revision": "final",
   "atlas_format": 2,
-  "blink_artwork": "half-blink",
+  "blink_artwork": "full-blink",
   "mouse_tracking_included": false,
   "files": [
     {
       "path": "assets/luca-v2.png",
-      "bytes": 2818293,
-      "sha256": "1921af2e8fc47766856a85ca340685af8031cb664211da2e3fcfb1351d737fcc"
+      "bytes": 2817421,
+      "sha256": "05df00e52e0fe3df26241a6d84581029109b6b45f99755ea6b2d9b1c3738ac6f"
     },
     {
       "path": "assets/previews/all-states.gif",
-      "bytes": 2121485,
-      "sha256": "cc10e01665f4f8daea43aad70b1c97d5622ba35c9225196e311842981d6f9b83"
+      "bytes": 2121163,
+      "sha256": "f3001a865fb594fbf4ae49a539d4ddb244360be5e88de4f77a3a05a051801211"
     },
     {
       "path": "assets/previews/all-states.mp4",
-      "bytes": 1910123,
-      "sha256": "9656fb4cd542835d5052a2176e7c1fb907762c3964e44c0432eb51edc741a062"
+      "bytes": 1908999,
+      "sha256": "cb12bc2d61d61439b37b80924fc05a1d00226630e7e99cd8cef15b1bf934a31e"
+    },
+    {
+      "path": "assets/previews/blink-natural-proposal.gif",
+      "bytes": 340637,
+      "sha256": "f92f481938c618d71f8053182e9af458857ffcbbd80349dca76f68b4c2941d35"
     },
     {
       "path": "assets/previews/contact-sheet.png",
@@ -41,8 +46,8 @@
     },
     {
       "path": "assets/previews/idle.gif",
-      "bytes": 202206,
-      "sha256": "e4600a1a74782fa9f81c980c58953cae65c06bf45cf81c5ccfd49c026f62c026"
+      "bytes": 201884,
+      "sha256": "56a029f34266da8f898e8aedf756fd56e4dc3336afc7013f728ef3961fe84786"
     },
     {
       "path": "assets/previews/jumping.gif",
@@ -90,9 +95,14 @@
       "sha256": "7f4dd500789b1716a9cf3db6430c4b1167dfb842212910b8ac57ce84353c9b27"
     },
     {
+      "path": "assets/source/blink-transition.png",
+      "bytes": 39771,
+      "sha256": "4a7b2b345e632fcbeb57b92fbb5ff316aa624e8d0de7a8e81f9743d2b3c5ed98"
+    },
+    {
       "path": "assets/source/rows/00-idle.png",
-      "bytes": 56596,
-      "sha256": "64e7d94e5804bf52e33ebb1606457d208b79a4725d5d9d003c894df75d1ea248"
+      "bytes": 56642,
+      "sha256": "b3c1372d621cb804127479c5a8206e46fb389284b440b6596c501017c3d70d04"
     },
     {
       "path": "assets/source/rows/01-running-right.png",
@@ -146,8 +156,8 @@
     },
     {
       "path": "petdex/luca-final-v2.zip",
-      "bytes": 2458138,
-      "sha256": "daeab842c27df0edcdd497df880665a8c353b8f53f66a5cd02e5d3204403a882"
+      "bytes": 2457053,
+      "sha256": "d2edb6f5ec110179eddb4c8e362dceb616baef72631e8aaf5555603f1a234226"
     },
     {
       "path": "petdex/pet.json",

@@ -1,0 +1,14 @@
+{
+  "purpose": "timing proposal, not a native client override",
+  "phases_ms": {
+    "closing": 40,
+    "fully_closed": 60,
+    "opening": 80
+  },
+  "total_blink_ms": 180,
+  "rest_open_ms_range": [
+    4000,
+    6000
+  ],
+  "implementation": "Requires a playback host with per-frame timing; do not add unsupported timing fields to pet.json."
+}

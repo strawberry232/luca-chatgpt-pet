@@ -6,7 +6,7 @@ An unofficial Identity V Luca Balsa pet asset for ChatGPT / Codex. This reposito
 
 ![Final animation states](assets/previews/all-states.gif)
 
-Disappointment shares the idle hair color and head proportions. Full side-profile running is retained in both directions. Idle uses a gentle half-blink to reduce the feeling of a held eye closure; actual frame durations are unchanged. Native playback timing is controlled by the client; GIFs are previews and cannot override native frame durations. No pointer-tracking page, mouse-position listener or additional turning interpolation is included.
+Disappointment shares the idle hair color and head proportions. Full side-profile running is retained in both directions. Idle restores fully closed eyes; native frame durations remain unchanged. The [natural full-blink proposal](docs/BLINK.md) demonstrates a 180 ms target rhythm without claiming a native timing override. Native playback timing is controlled by the client; GIFs are previews and cannot override native frame durations. No pointer-tracking page, mouse-position listener or additional turning interpolation is included.
 
 ## Download and use
 
