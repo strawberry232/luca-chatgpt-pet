@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "verified_date": "2026-10-19",
+  "canonical_atlas": "assets/luca-v2.png",
+  "atlas_sha256": "1921af2e8fc47766856a85ca340685af8031cb664211da2e3fcfb1351d737fcc",
+  "stored_file_is_canonical": true,
+  "stored_rgba_matches_submitted": true,
+  "updated_existing_pet": true,
+  "active_selection_preserved": true,
+  "blink_artwork": "half-blink",
+  "native_timing_override": false,
+  "mouse_tracking_included": false
+}

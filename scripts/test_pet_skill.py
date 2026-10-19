@@ -37,7 +37,7 @@ class PetSkillChecks(unittest.TestCase):
         self.assertEqual((report['spriteVersionNumber'], report['used_cells']), (1, 57))
 
     def test_failed_head_reuses_canonical_hair_without_scaling(self):
-        with Image.open(ROOT/'assets/source/pre-face-repair.png') as before, Image.open(self.atlas) as after:
+        with Image.open(ROOT/'assets/source/rows/00-idle.png') as before, Image.open(self.atlas) as after:
             canonical = before.crop((0, 0, 192, 208))
             self.assertEqual(after.crop((0, 0, 192, 208)).tobytes(), canonical.tobytes())
             hair = canonical.crop((30, 4, 170, 70)).tobytes()
@@ -69,17 +69,18 @@ class PetSkillChecks(unittest.TestCase):
                 self.assertFalse((self.folder/'bad.zip').exists())
 
     def test_unapproved_row_change_is_detected(self):
-        before = ROOT/'assets/source/pre-face-repair.png'
-        report = TOOLS.compare_atlases(before, self.atlas, [0, 5])
-        self.assertTrue(report['ok'])
-        self.assertEqual(report['changed_rows'], [0, 5])
-        path = self.folder/'changed-idle.png'
+        path=self.folder/'changed.png'
         with Image.open(self.atlas) as image:
-            image.putpixel((96, 3*208+100), (255, 0, 0, 255))
+            image.putpixel((96,9*208+80),(255,0,0,255))
             image.save(path)
-        report = TOOLS.compare_atlases(before, path, [0, 5])
+            report=TOOLS.compare_atlases(self.atlas,path,[9,10])
+            self.assertTrue(report['ok'])
+            self.assertEqual(report['changed_rows'],[9])
+            image.putpixel((96,3*208+100),(255,0,0,255))
+            image.save(path)
+        report=TOOLS.compare_atlases(self.atlas,path,[9,10])
         self.assertFalse(report['ok'])
-        self.assertEqual(report['unexpected_changed_rows'], [3])
+        self.assertEqual(report['unexpected_changed_rows'],[3])
 
     def test_unused_cell_and_transparent_rgb_are_reported(self):
         path = self.folder/'bad-alpha.png'

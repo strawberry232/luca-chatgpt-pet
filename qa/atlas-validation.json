@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "file": "final/spritesheet-extended.png",
-  "encoded_bytes": 2025049,
-  "sha256": "ff07946f3536678478ba0ea650e16335d629c6fd635e8435323aa925947a342a",
+  "file": "assets/luca-v2.png",
+  "encoded_bytes": 2818293,
+  "sha256": "1921af2e8fc47766856a85ca340685af8031cb664211da2e3fcfb1351d737fcc",
   "format": "PNG",
   "mode": "RGBA",
   "columns": 8,
@@ -667,7 +667,7 @@
       "row": 9,
       "column": 0,
       "used": true,
-      "nontransparent_pixels": 14261,
+      "nontransparent_pixels": 14321,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -676,7 +676,7 @@
       "row": 9,
       "column": 1,
       "used": true,
-      "nontransparent_pixels": 13746,
+      "nontransparent_pixels": 14265,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -685,7 +685,7 @@
       "row": 9,
       "column": 2,
       "used": true,
-      "nontransparent_pixels": 13769,
+      "nontransparent_pixels": 13297,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -694,7 +694,7 @@
       "row": 9,
       "column": 3,
       "used": true,
-      "nontransparent_pixels": 13845,
+      "nontransparent_pixels": 13393,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -703,7 +703,7 @@
       "row": 9,
       "column": 4,
       "used": true,
-      "nontransparent_pixels": 13918,
+      "nontransparent_pixels": 13648,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -712,7 +712,7 @@
       "row": 9,
       "column": 5,
       "used": true,
-      "nontransparent_pixels": 14100,
+      "nontransparent_pixels": 13823,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -721,7 +721,7 @@
       "row": 9,
       "column": 6,
       "used": true,
-      "nontransparent_pixels": 13943,
+      "nontransparent_pixels": 13759,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -730,7 +730,7 @@
       "row": 9,
       "column": 7,
       "used": true,
-      "nontransparent_pixels": 13868,
+      "nontransparent_pixels": 13647,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -739,7 +739,7 @@
       "row": 10,
       "column": 0,
       "used": true,
-      "nontransparent_pixels": 15156,
+      "nontransparent_pixels": 14795,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -748,7 +748,7 @@
       "row": 10,
       "column": 1,
       "used": true,
-      "nontransparent_pixels": 14875,
+      "nontransparent_pixels": 14573,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -757,7 +757,7 @@
       "row": 10,
       "column": 2,
       "used": true,
-      "nontransparent_pixels": 14808,
+      "nontransparent_pixels": 14484,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -766,7 +766,7 @@
       "row": 10,
       "column": 3,
       "used": true,
-      "nontransparent_pixels": 14288,
+      "nontransparent_pixels": 14001,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -775,7 +775,7 @@
       "row": 10,
       "column": 4,
       "used": true,
-      "nontransparent_pixels": 13707,
+      "nontransparent_pixels": 13468,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -784,7 +784,7 @@
       "row": 10,
       "column": 5,
       "used": true,
-      "nontransparent_pixels": 14815,
+      "nontransparent_pixels": 14566,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -793,7 +793,7 @@
       "row": 10,
       "column": 6,
       "used": true,
-      "nontransparent_pixels": 14862,
+      "nontransparent_pixels": 14355,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -802,7 +802,7 @@
       "row": 10,
       "column": 7,
       "used": true,
-      "nontransparent_pixels": 14978,
+      "nontransparent_pixels": 14276,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     }

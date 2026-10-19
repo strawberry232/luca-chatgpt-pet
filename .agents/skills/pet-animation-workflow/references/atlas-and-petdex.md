@@ -19,7 +19,7 @@ v2 共 73 个有图格、15 个空格；v1 共 57 个有图格、15 个空格。
 
 ```text
 python SKILL_DIR/scripts/pet_assets.py inspect PROJECT/assets/luca-v2.png
-python SKILL_DIR/scripts/pet_assets.py compare PROJECT/assets/source/base-spritesheet.png PROJECT/assets/luca-v2.png --allow-rows 1 2
+python SKILL_DIR/scripts/pet_assets.py compare PROJECT/build/before-edit.png PROJECT/assets/luca-v2.png --allow-rows 1 2
 python SKILL_DIR/scripts/pet_assets.py package PROJECT/assets/luca-v2.png --manifest PROJECT/petdex/pet.json --output PROJECT/build/petdex.zip
 ```
 

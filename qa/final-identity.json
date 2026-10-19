@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "atlas_sha256": "1921af2e8fc47766856a85ca340685af8031cb664211da2e3fcfb1351d737fcc",
+  "failure_hair_exact_rgba_frames": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "head_scale": 1.0,
+  "source_rows_exact": 11,
+  "used_cells": 73,
+  "empty_cells": 15,
+  "rebuilt_rgba_equal": true,
+  "package_atlas_bytes_equal": true
+}

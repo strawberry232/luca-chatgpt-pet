@@ -1,18 +1,9 @@
-# Quality evidence / 质量检查
+# Final verification / 最终版检查
 
-Current artwork revision: v6, with only idle row 0 and failure row 5 changed since v5. The other nine rows, including side-profile running and all sixteen look poses, remain exact RGBA matches. The neutral idle frame is also unchanged.
+Only checks for the final deliverable are kept here. / 这里只保存针对最终交付的检查。
 
-当前为 v6 修订，仅修改待机第 0 行和失落第 5 行；其余九行，包括侧身跑步和十六方向，逐像素保留。待机第 0 帧仍为原图。
+- `atlas-validation.json`: Pets bundled validator, exact final PNG geometry, alpha and chroma checks. / Pets 随附检查器验证最终 PNG 的尺寸、透明度和绿边。
+- `final-identity.json`: eleven final row strips, occupied cells, hashes, exact unscaled canonical upper hair in all eight failure frames, package pixels/bytes, optional rebuild parity. / 十一张最终行图、有效格、哈希、八帧失落的原尺寸头发、投稿包及重建一致性。
+- `sync-verification.json`: successful pet update and downloaded-file comparison; no account identity or temporary URLs. / 宠物更新及下载回读核对，不包含账号身份或临时链接。
 
-- `atlas-validation.json`: final v2 dimensions, transparency and chroma checks passed. / 最终图集的尺寸、透明度和绿边检查通过。
-- `identity-and-timing.json`: unscaled canonical head/hair and costume reused; integer translation only; actual client timing versus preview timing documented. / 复用待机头发、头部和衣服，仅作整数像素位移；记录真实客户端与预览节奏的区别。
-- `standard-frame-review.json`: final frame review passed, with expected warnings about authorized manual layering and preserved atlas extraction. / 帧检查通过，包含手工分层及保留原帧的方式提示。
-- `chroma-despill.json`: final edges were already clean, so the final preservation pass used strength 0 and changed no pixels. New source art is transparent. / 最终边缘已干净，保色步骤强度为 0，无像素改色；新原画为透明底。
-- `pet-quality.json`: final gate passed; the existing non-fatal 157.5° → 180° look-continuity warning is unchanged. / 最终质量检查通过，原有 157.5° → 180° 非致命连续性提示仍保留。
-- `viewer-browser-check.json`: all sixteen directions, mode switching, language labels, blink timing and mobile layout passed in an actual headless browser. This verifies the standalone viewer, not ChatGPT global mouse tracking. / 实际浏览器验证十六方向、动作切换、中英文、眨眼节奏和窄屏布局；此结果只针对独立预览页。
-- `turn-transition-browser-check.json`: browser checks cover continuous rendered pixel changes inside a single original sector, loading all 128 inbetweens, shortest-path wraparound, half turns, status-index boundary stability, all sixteen targets, demo playback, reduced motion and narrow layout. / 浏览器验证原扇区内的实际连续画面变化、128 帧加载、最短路线跨界、半圈转向、状态索引防抖、十六目标、演示、减少动态效果和窄屏布局。
-- `turn-inbetweens.json`: the viewer-only sheet preserves all sixteen original endpoint cells and adds 112 warped frames. Adjacent image differences are reported as a numerical reference, not proof of naturalness. The native atlas hash is unchanged. / 预览专用素材保留十六个原始端点并增加 112 帧形变；相邻差值仅作数值参考，不证明动作自然；原生图集哈希保持不变。
-
-`archive-v5/` holds earlier profile-running checks. Reports with machine-local paths have been sanitized. `scripts/verify.py` checks the current asset hashes, occupied cells, preserved rows and optional rebuilt-image parity; it does not judge visual naturalness.
-
-`archive-v5/` 保留上一轮侧身跑步检查；本机路径已清理。验证脚本检查当前素材哈希、有效格、保留行和可选重建一致性，不替代人工观感判断。
+These checks do not prove perceptual naturalness or override the native client's animation timing. / 这些检查不替代观感判断，也不能改写客户端动画时长。
